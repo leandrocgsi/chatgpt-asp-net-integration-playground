@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace chatgpt_asp_net_integration.Controllers
+namespace ChatGPT.ASP.NET.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
