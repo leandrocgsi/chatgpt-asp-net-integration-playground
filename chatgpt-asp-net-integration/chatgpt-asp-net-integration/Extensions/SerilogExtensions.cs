@@ -1,5 +1,4 @@
 ﻿using Serilog;
-using Serilog.Configuration;
 
 namespace ChatGPT.ASP.NET.Integration.Extensions;
 
