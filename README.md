@@ -1,7 +1,5 @@
 # ChatGPT ASP.NET 8 Integration Playground
 
-[![Build Status](https://travis-ci.org/leandrocgsi/RestWithASP-NET5Udemy.svg?branch=master)](https://travis-ci.org/leandrocgsi/RestWithASP-NET5Udemy)
-![Continuous Integration with Github Actions](https://github.com/leandrocgsi/RestWithASP-NET5Udemy/workflows/Continuous%20Integration%20with%20Github%20Actions/badge.svg)
 ![Forks](https://img.shields.io/github/forks/leandrocgsi/RestWithASP-NET5Udemy)
 ![Stars](https://img.shields.io/github/stars/leandrocgsi/RestWithASP-NET5Udemy)
 ![Last Commit](https://img.shields.io/github/last-commit/leandrocgsi/RestWithASP-NET5Udemy)
