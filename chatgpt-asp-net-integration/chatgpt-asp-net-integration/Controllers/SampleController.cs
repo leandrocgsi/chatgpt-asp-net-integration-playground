@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OpenAI_API;
 using OpenAI_API.Completions;
 using OpenAI_API.Models;
@@ -19,18 +18,18 @@ public class SampleController : Controller
 	[HttpGet]
 	public async Task<IActionResult> GetSampleChatpGpt(string text)
 	{
-		var resposta = string.Empty;
+		var response = string.Empty;
 		var completion = new CompletionRequest
 		{
 			Prompt = text,
-			Model = Model.DavinciText,
+			Model = Model.ChatGPTTurbo,
 			MaxTokens = 200
 		};
 
 		var result = await _chatGpt.Completions.CreateCompletionAsync(completion);
 
-		result.Completions.ForEach(resultText => resposta = resultText.Text);
+		result.Completions.ForEach(resultText => response = resultText.Text);
 
-		return Ok(resposta);
+		return Ok(response);
 	}
 }
