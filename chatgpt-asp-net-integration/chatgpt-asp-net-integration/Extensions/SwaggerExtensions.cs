@@ -10,7 +10,7 @@ public static class SwaggerExtensions
 		{
 			c.SwaggerDoc("v1", new OpenApiInfo
 			{
-				Title = "Sample ChatGPT",
+				Title = "ChatGPT ASP.NET 8 Integration",
 				Version = "v1"
 			});
 			c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
@@ -22,7 +22,7 @@ public static class SwaggerExtensions
 		app.UseSwagger();
 		app.UseSwaggerUI(c =>
 		{
-			c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sample ChatGPT");
+			c.SwaggerEndpoint("/swagger/v1/swagger.json", "ChatGPT ASP.NET 8 Integration");
 			c.RoutePrefix = "swagger";
 		});
 	}
