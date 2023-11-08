@@ -5,24 +5,24 @@ using OpenAI_API.Models;
 
 namespace ChatGPT.ASP.NET.Integration.Controllers;
 
-[Route("api/[controller]")]
-public class SampleController : Controller
+[Route("bot/[controller]")]
+public class ChatController : Controller
 {
 	private readonly OpenAIAPI _chatGpt;
 
-	public SampleController(OpenAIAPI chatGpt)
+	public ChatController(OpenAIAPI chatGpt)
 	{
 		_chatGpt = chatGpt;
 	}
 
-	[HttpGet]
-	public async Task<IActionResult> GetSampleChatpGpt(string text)
+    [HttpGet()]
+    public async Task<IActionResult> GetSampleChatGpt([FromQuery(Name = "prompt")] string prompt)
 	{
 		var response = string.Empty;
 		var completion = new CompletionRequest
 		{
-			Prompt = text,
-			Model = Model.ChatGPTTurbo,
+			Prompt = prompt,
+			Model = Model.DavinciText,
 			MaxTokens = 200
 		};
 
